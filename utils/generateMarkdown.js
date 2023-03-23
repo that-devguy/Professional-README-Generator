@@ -14,6 +14,20 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  ${data.desc}
+  
+  ## Technologies Used
+
+  ${data.technologies}
+  
+  ## ${data.title} Demo
+  
+  The following images show the web application's appearance and functionality:
+  
+  ## Links
+  
+  Deployed Application: ${data.appURL}
+  Github Repository: ${data.repoURL}
 `;
 }
 
