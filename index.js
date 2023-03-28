@@ -9,7 +9,8 @@ const questions = [
             type: 'input',
             message: 'What is the title of your project?',
             name: 'title',
-            validate: (value) => {if(value){return true} else {return 'Please give your project a title.'}}
+            validate: (value) => {
+              if (value) {return true} else {return 'Please give your project a title.'}}
         },
         {
             type: 'list',
@@ -23,6 +24,19 @@ const questions = [
             message: 'Please write a description of your project.',
             name: 'desc',
             validate: (value) => {if(value){return true} else {return 'Please give your project a brief description, you can edit this later.'}}
+        },
+        {
+            type: 'list',
+            message: 'Would you like to include the Installation Instructions section?',
+            name: 'installation',
+            choices: ['Yes', 'No'],
+            default: 'Yes',
+        },
+        {
+          type: 'input',
+          message: 'What are the intrustions for the installation of your project?',
+          name: 'instructions',
+          when: (answers) => answers.installation === 'Yes',
         },
         {
             type: 'checkbox',
@@ -47,17 +61,14 @@ const questions = [
               {name: 'Docker'},
               {name: 'Kubernetes'},
             ],
-            validate: (value) => {if(value){return true} else {return 'Please select atleast one of the technologies used to build your project.'}}
+            validate: (value) => {if(value.length > 0){return true} else {return 'Please select atleast one of the technologies used to build your project.'}}
         },
         {
-            type: 'input',
-            message: 'What is your GitHub repository URL?',
-            name: 'repoURL',
-        },
-        {
-            type: 'input',
-            message: 'What is your deployed application URL?',
-            name: 'appURL',
+            type: 'list',
+            message: 'Would you like to include a Project Links sections?',
+            name: 'links',
+            choices: ['Yes', 'No'],
+            default: 'Yes',
         },
     ];
 

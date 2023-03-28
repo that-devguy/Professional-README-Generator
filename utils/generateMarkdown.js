@@ -26,43 +26,72 @@ function renderLicenseSection(license) {
   }
 
   return `## License
-  ${renderLicenseBadge(license)}
-  This project is licensed under the ${license} license. Feel free to edit and distribute this template as you like.
-  See LICENSE for more information.`
+
+This project is licensed under the ${license} license. Feel free to edit and distribute this template as you like.
+See ${renderLicenseBadge(license)} for more information.`
+}
+
+// If user selected Installation Section then create the Installation Section
+function renderInstallationSection(installation) {
+  if (installation === 'No') {
+    return '';
+}
+
+return `## Installation
+
+Please follow these steps to install and run the project on your local machine:`
+}
+
+function renderInstallationInstructions(instructions) {
+  if (!instructions) {
+    return '';
+  }
+
+  return `${instructions}`
+}
+
+// If user selected Project Links then create the Project Links section
+function renderLinksSections(links) {
+  if (links === 'No') {
+    return '';
+}
+
+return `## Project Links
+  
+Deployed Application:
+Github Repository:`
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  ${renderLicenseBadge(data.license)}
+${renderLicenseBadge(data.license)}
   
-  ${data.desc}
+${data.desc}
   
   
-  ## Table of Contents
-  - [Technologies Used](#technologies-used)
-  - [Installation](#installation-instructions)
-  - [Application Demo](#demo)
-  - [Links](#links)
-  - [License](#license)
+## Table of Contents
 
-  ## Technologies Used
+- [Technologies Used](#technologies-used)
+- [Installation](#installation-instructions)
+- [Application Demo](#demo)
+- [Project Links](#project-links)
+- [License](#license)
 
-  ${data.technologies.join(', ')}
+## Technologies Used
 
-  ## Installation Instructions
-  
-  
-  ## ${data.title} Demo
-  
-  The following images show the web application's appearance and functionality:
-  
-  ## Links
-  
-  Deployed Application: ${data.appURL} 
-  Github Repository: ${data.repoURL}
+${data.technologies.join(', ')}
 
-  ${renderLicenseSection(data.license)}
+${renderInstallationSection()}
+${renderInstallationInstructions(data.instructions)}
+  
+## ${data.title} Demo
+  
+The following images show the web application's appearance and functionality:
+  
+${renderLinksSections()}
+
+${renderLicenseSection(data.license)}
 `;
 }
 
