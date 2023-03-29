@@ -97,7 +97,7 @@ ${data.desc}
   
 ## Table of Contents
 
-- [Installation](#installation-instructions)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
@@ -124,6 +124,7 @@ ${renderUsageInstructions(data.usage)}
 
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
 ${renderContributionsInstructions(data.contributions)}
+Please ensure your pull request adheres to the project's code style and includes tests for any new features or changes. Thank you for your contributions!
 
 ## Tests
 
