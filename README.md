@@ -37,6 +37,7 @@ To use this project, follow these steps:
 
 ## Contributing
 
+For practice purposes, contributions are not currently available on this project.
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
 1. Fork this repository
 2. Create a new branch
@@ -50,12 +51,14 @@ Please ensure your pull request adheres to the project's code style and includes
 ## Tests
 
 To run tests on this project, follow these steps:
+
 Testing will be added to the project in a future update
   
 ## Project Links
   
 Deployed Application:
-Github Repository:
+
+Github Repository: https://github.com/that-devguy/Professional-README-Generator
 
 ## License
 

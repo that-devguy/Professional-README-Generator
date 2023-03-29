@@ -27,7 +27,7 @@ function renderLicenseSection(license) {
 
   return `## License
 
-This project is licensed under the ${license} license. Feel free to edit and distribute this template as you like.
+This project is licensed under the ${license} license. Feel free to edit and distribute this template as you like.\n
 See ${renderLicenseBadge(license)} for more information.`
 }
 
@@ -134,7 +134,7 @@ ${renderTestsInstructions(data.tests)}
   
 ## Project Links
   
-Deployed Application:
+Deployed Application:\n
 Github Repository:
 
 ${renderLicenseSection(data.license)}
