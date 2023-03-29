@@ -38,7 +38,7 @@ To use this project, follow these steps:
 ## Contributing
 
 For practice purposes, contributions are not currently available on this project.
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+
 1. Fork this repository
 2. Create a new branch
 3. Make changes or additions to the code
