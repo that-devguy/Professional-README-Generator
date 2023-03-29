@@ -134,7 +134,7 @@ ${renderTestsInstructions(data.tests)}
   
 ## Project Links
   
-Deployed Application:\n
+Walkthrough Demo:\n
 Github Repository:
 
 ${renderLicenseSection(data.license)}

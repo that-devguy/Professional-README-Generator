@@ -24,15 +24,15 @@ JavaScript, Node.js
 Please follow these steps to install and run the project on your local machine:
 1. Install Node.js
 2. Clone the repository
-3. Install dependencies by opening the cloned repository and run the command 'npm install' to install all the dependencies required for the generator
-4. Run the generator by running the command 'node index' to start the generator and answer the prompts
+3. Install dependencies by opening the cloned repository and run the command `npm install` to install all the dependencies required for the generator
+4. Run the generator by running the command `node index` to start the generator and answer the prompts
   
 ## Usage
   
 To use this project, follow these steps:
 1. Clone this repository to your local machine
 2. Follow the installation instructions in the README
-3. Start the application by running 'node index' in your termal
+3. Start the application by running `node index` in your termal
 4. Answer all the prompts to generate your README
 
 ![README Generator Demo Image](/assets/readme-generator-demo.JPG)
