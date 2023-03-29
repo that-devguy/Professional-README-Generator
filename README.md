@@ -44,6 +44,7 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 4. Commit your changes
 5. Push to the branch
 6. Create a new pull request
+
 Please ensure your pull request adheres to the project's code style and includes tests for any new features or changes. Thank you for your contributions!
 
 ## Tests
