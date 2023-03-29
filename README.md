@@ -35,12 +35,11 @@ To use this project, follow these steps:
 3. Start the application by running 'node index' in your termal
 4. Answer all the prompts to generate your README
 
-Walkthrough Demo
-https://drive.google.com/file/d/1sGQpgTem2pCWvOQpmEYme9IULSnOgfEJ/view
+![README Generator Demo Image](/assets/readme-generator-demo.JPG)
 
 ## Contributing
 
-For practice purposes, contributions are not currently available on this project.
+For testing purposes only, contributions are not currently available on this project.
 
 1. Fork this repository
 2. Create a new branch
@@ -59,7 +58,7 @@ Testing will be added to the project in a future update
   
 ## Project Links
   
-Deployed Application:
+Walkthrough Demo: https://drive.google.com/file/d/1sGQpgTem2pCWvOQpmEYme9IULSnOgfEJ/view
 
 Github Repository: https://github.com/that-devguy/Professional-README-Generator
 
