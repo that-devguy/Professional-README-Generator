@@ -35,6 +35,9 @@ To use this project, follow these steps:
 3. Start the application by running 'node index' in your termal
 4. Answer all the prompts to generate your README
 
+Walkthrough Demo
+https://drive.google.com/file/d/1sGQpgTem2pCWvOQpmEYme9IULSnOgfEJ/view
+
 ## Contributing
 
 For practice purposes, contributions are not currently available on this project.
