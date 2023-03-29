@@ -6,11 +6,22 @@ const generateMarkdown = require('./utils/generateMarkdown.js')
 // TODO: Create an array of questions for user input
 const questions = [
         {
+          type: 'input',
+          message: 'What is your GitHub username?',
+          name: 'github',
+          validate: (value) => {if (value) {return true} else {return 'Please enter your GitHub username.'}}
+        },
+        {
+          type: 'input',
+          message: 'What is your email address?',
+          name: 'email',
+          validate: (value) => {if (value) {return true} else {return 'Please enter your email address.'}}
+        },
+        {
             type: 'input',
             message: 'What is the title of your project?',
             name: 'title',
-            validate: (value) => {
-              if (value) {return true} else {return 'Please give your project a title.'}}
+            validate: (value) => {if (value) {return true} else {return 'Please give your project a title.'}}
         },
         {
             type: 'list',
@@ -26,17 +37,16 @@ const questions = [
             validate: (value) => {if(value){return true} else {return 'Please give your project a brief description, you can edit this later.'}}
         },
         {
-            type: 'list',
-            message: 'Would you like to include the Installation Instructions section?',
-            name: 'installation',
-            choices: ['Yes', 'No'],
-            default: 'Yes',
+          type: 'input',
+          message: 'Please list any installation instructions for your project.(Please number your steps and separate them with a semicolon)',
+          name: 'instructions',
+          validate: (value) => {if(value){return true} else {return 'Please list any instructions for installing your project, you can edit this later.'}}
         },
         {
           type: 'input',
-          message: 'What are the intrustions for the installation of your project?',
-          name: 'instructions',
-          when: (answers) => answers.installation === 'Yes',
+          message: 'Please list any instructions needed to use your project.(Please number your steps and separate them with a semicolon)',
+          name: 'usage',
+          validate: (value) => {if(value){return true} else {return 'Please list any instructions for using your project, you can edit this later.'}}
         },
         {
             type: 'checkbox',
@@ -60,15 +70,23 @@ const questions = [
               {name: 'AWS'},
               {name: 'Docker'},
               {name: 'Kubernetes'},
+            
             ],
-            validate: (value) => {if(value.length > 0){return true} else {return 'Please select atleast one of the technologies used to build your project.'}}
+            validate: (value) => {if(value.length > 0){return true} else {return 'Please select atleast one of the technologies used to build your project, you can add more later.'}}
         },
         {
-            type: 'list',
-            message: 'Would you like to include a Project Links sections?',
-            name: 'links',
-            choices: ['Yes', 'No'],
-            default: 'Yes',
+          type: 'input',
+          message: 'Please list any contribution instructions for your project.(Please number your steps and separate them with a semicolon)',
+          name: 'contributions',
+          validate: (value) => {if(value){return true} else {return 'Please list any contribution instructions for your project, you can edit this later.'}}
+
+        },
+        {
+          type: 'input',
+          message: 'Please list any testing instructions for your project.(Please number your steps and separate them with a semicolon)',
+          name: 'tests',
+          validate: (value) => {if(value){return true} else {return 'Please list any testing instructions for your project, you can edit this later.'}}
+
         },
     ];
 

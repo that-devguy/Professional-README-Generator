@@ -31,35 +31,60 @@ This project is licensed under the ${license} license. Feel free to edit and dis
 See ${renderLicenseBadge(license)} for more information.`
 }
 
-// If user selected Installation Section then create the Installation Section
-function renderInstallationSection(installation) {
-  if (installation === 'No') {
-    return '';
-}
-
-return `## Installation
-
-Please follow these steps to install and run the project on your local machine:`
-}
-
 function renderInstallationInstructions(instructions) {
   if (!instructions) {
     return '';
   }
-
-  return `${instructions}`
+  const instructionsArray = instructions.split(';');
+  const instructionsList = instructionsArray.join('\n')
+  return `${instructionsList}`
 }
 
-// If user selected Project Links then create the Project Links section
-function renderLinksSections(links) {
-  if (links === 'No') {
+function renderUsageInstructions(usage) {
+  if (!usage) {
     return '';
+  }
+  const usageArray = usage.split(';');
+  const usageList = usageArray.join('\n')
+  return `${usageList}`
 }
 
-return `## Project Links
-  
-Deployed Application:
-Github Repository:`
+function renderContributionsInstructions(contributions) {
+  if (!contributions) {
+    return '';
+  }
+  const contributionsArray = contributions.split(';');
+  const contributionsList = contributionsArray.join('\n')
+  return `${contributionsList}`
+}
+
+function renderTestsInstructions(tests) {
+  if (!tests) {
+    return '';
+  }
+  const testsArray = tests.split(';');
+  const testsList = testsArray.join('\n')
+  return `${testsList}`
+}
+
+function renderQuestionsSection(github, email) {
+  if (!github && !email) {
+    return '';
+  }
+
+  let githubLink = '';
+  if (github) {
+    githubLink = `[${github}](https://github.com/${github})`;
+  }
+
+  let emailLink = '';
+  if (email) {
+    emailLink = ` or email me at ${email}`;
+  }
+
+  return `## Questions
+
+If you have any questions or issues, feel free to reach out to me via my GitHub profile: ${githubLink}${emailLink}.`;
 }
 
 // TODO: Create a function to generate markdown for README
@@ -72,26 +97,47 @@ ${data.desc}
   
 ## Table of Contents
 
-- [Technologies Used](#technologies-used)
 - [Installation](#installation-instructions)
-- [Application Demo](#demo)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [Tests](#tests)
 - [Project Links](#project-links)
 - [License](#license)
+- [Questions](#questions)
 
 ## Technologies Used
 
 ${data.technologies.join(', ')}
 
-${renderInstallationSection()}
+## Installation
+
+Please follow these steps to install and run the project on your local machine:
 ${renderInstallationInstructions(data.instructions)}
   
-## ${data.title} Demo
+## Usage
   
-The following images show the web application's appearance and functionality:
+To use this project, follow these steps:
+${renderUsageInstructions(data.usage)}
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+${renderContributionsInstructions(data.contributions)}
+
+## Tests
+
+To run tests on this project, follow these steps:
+${renderTestsInstructions(data.tests)}
   
-${renderLinksSections()}
+## Project Links
+  
+Deployed Application:
+Github Repository:
 
 ${renderLicenseSection(data.license)}
+
+${renderQuestionsSection(data.github, data.email)}
 `;
 }
 
