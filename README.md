@@ -6,9 +6,9 @@ My Professional README Generator uses Node.js and Inquirer to prompt a user with
   
 ## Table of Contents
 
+- [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Project Links](#project-links)
