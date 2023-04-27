@@ -97,9 +97,9 @@ ${data.desc}
   
 ## Table of Contents
 
+- [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Project Links](#project-links)
